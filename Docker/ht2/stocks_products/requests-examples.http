@@ -1,0 +1,94 @@
+# примеры API-запросов
+
+@baseUrl = http://localhost:8000/api/v1
+###
+# создание продукта +
+POST  http://127.0.0.1:8000/api/v1/products/
+Content-Type: application/json
+
+{
+  "title": "Сыр",
+  "description": "головка"
+}
+
+###
+
+# получение продуктов +
+GET http://127.0.0.1:8000/api/v1/products/
+Content-Type: application/json
+
+###
+
+# обновление продукта +
+PATCH http://127.0.0.1:8000/api/v1/products/1/
+Content-Type: application/json
+
+{
+  "description": "Сыр кусками в кг."
+}
+
+###
+
+# удаление продукта +
+DELETE http://127.0.0.1:8000/api/v1/products/4/
+Content-Type: application/json
+
+###
+
+# поиск продуктов по названию и описанию +
+GET http://127.0.0.1:8000/api/v1/products/?search=лук
+Content-Type: application/json
+
+###
+
+# создание склада +
+POST http://127.0.0.1:8000/api/v1/stocks/
+Content-Type: application/json
+
+{
+  "address": "Спб, Восстания 1",
+  "positions": [
+    {
+      "product": 6,
+      "quantity": 66,
+      "price": 666
+    },
+    {
+      "product": 7,
+      "quantity": 77,
+      "price": 777
+    },
+    {
+      "product": 8,
+      "quantity": 88,
+      "price": 888
+    }
+  ]
+}
+
+###
+
+# обновляем записи на складе +
+PATCH http://127.0.0.1:8000/api/v1/stocks/18/
+Content-Type: application/json
+
+{
+  "positions": [
+    {
+      "product": 6,
+      "quantity": 400,
+      "price": 3
+    },
+    {
+      "product": 8,
+      "quantity": 300,
+      "price": 890
+    }
+  ]
+}
+
+###
+
+# поиск складов, где есть определенный продукт+
+GET http://127.0.0.1:8000/api/v1/stocks/?products=6&ordering=positions__price
+Content-Type: application/json
