@@ -6,7 +6,7 @@ author: 'RMS83'
 ### Команды для запуска контейнера.
 Все команды выполнять в терминале
 * `git clone https://github.com/RMS83/PiWEB.git` - клонируем репозиторий с GitHub к себе на хост (Ваш PC)
-* `cd ht2` - переходим в директорию ht2
+* `cd PiWEB/Docker/ht2` - переходим в директорию ht2
 * `docker build -t images/name .` - запускаем создание образа из Dockerfile (images/name  - название образа, обычно пользователь/образ).
 ВНИМАНИЕ! '.' в конце строки обязательна.
 * `docker run -d -p 7001:6060 --name roof images/name` - запускаем контейнер с именем roof с пробросом портов с 6060 на 7001.
@@ -18,6 +18,6 @@ url по которому доступно приложение - `127.0.0.1:700
 
 ### Команды для остановки/удаления контейнера и удаления собранного образа.
 Все команды выполнять в терминале
-* `docker container stof roof` - останавливаем контейнер
+* `docker container stop roof` - останавливаем контейнер
 * `docker rm $(docker ps -a -q -f status=exited)` - удалит все контейнеры со статусом exited
-* `cd rmi images/name` - удалит образ images/name
+* `docker rmi images/name` - удалит образ images/name
