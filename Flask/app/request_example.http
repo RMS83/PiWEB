@@ -1,0 +1,70 @@
+@baseUrl = http://localhost:5000
+
+###
+# получить пользователя по id
+GET http://127.0.0.1:5000/users/1
+Content-Type: application/json
+
+###
+# запостить пользователя
+POST http://127.0.0.1:5000/users
+Content-Type: application/json
+
+{
+  "email":  "SRoman6@mail.ru",
+  "password": "Doefagg3rrgg"
+}
+
+###
+# обновить пользователя
+PATCH http://127.0.0.1:5000/users/3
+Content-Type: application/json
+Authorization: 729afe45-7a5a-4ad9-acfe-b2c46bd86c34
+
+{
+  "email": "SRoman2000@mail.ru" ,
+  "password": "Foefa34532!ddDd23"
+}
+
+###
+# удалить пользователя
+DELETE http://127.0.0.1:5000/users/1
+Content-Type: application/json
+Authorization: 68223d44-b062-4719-98e2-3189385ef438
+
+
+
+###
+# получить объявление по id
+GET http://127.0.0.1:5000/ads/2
+Content-Type: application/json
+
+###
+# запостить объявление
+POST http://127.0.0.1:5000/ads
+Content-Type: application/json
+Authorization: 68223d44-b062-4719-98e2-3189385ef438
+
+{
+  "title":  "11Продам оленя юзер1",
+  "description": "Иногда он гавкает, потому что болеет аутизмом"
+}
+
+###
+# обновить объявление
+PATCH http://127.0.0.1:5000/ads/1
+Content-Type: application/json
+Authorization: 8c617182-e2f8-45d3-850c-d65d13aa0d38
+
+{
+  "title":  "Про5 оленя от USER1",
+  "description": "Но этот не гавкает"
+}
+
+###
+# удалить объявление
+DELETE http://127.0.0.1:5000/ads/1
+Content-Type: application/json
+Authorization: 68223d44-b062-4719-98e2-3189385ef438
+
+
