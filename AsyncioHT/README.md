@@ -14,7 +14,7 @@ author: 'RMS83'
 ```shell
 git clone https://github.com/RMS83/PiWEB.git
 cd PiWEB/AsyncioHT
-python venv venv
+python -m venv venv
 ./venv/Scripts/activate
 pip install -r requirements.txt
 docker-compose up
