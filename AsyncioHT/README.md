@@ -12,11 +12,11 @@ author: 'RMS83'
 * запустите оркестратор (в нем крутится БД) 
 * запустите приложение (main.py)
 ```shell
-git clone https://github.com/RMS83/PiWEB.git&&
-cd PiWEB/AsyncioHT&&
-python venv venv&&
-./venv/Scripts/activate&&
-pip install -r requirements.txt&&
-docker-compose up&&
+git clone https://github.com/RMS83/PiWEB.git
+cd PiWEB/AsyncioHT
+python venv venv
+./venv/Scripts/activate
+pip install -r requirements.txt
+docker-compose up
 python main.py
 ```
